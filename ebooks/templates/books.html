@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>UoS Books</h1>
+<table border="1">
+    <tr><th>Title</th><th>Author</th><th>Genre</th><th>Price</th><th>Stock</th></tr>
+    {% for bk in book %}
+    <tr>
+        <td>{{bk.title}}</td>
+        <td>{{bk.author}}</td>
+        <td>{{bk.genre}}</td>
+        <td>{{bk.price}}</td>
+        <td>{{bk.stock}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
